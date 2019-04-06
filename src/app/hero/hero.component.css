@@ -1,0 +1,12 @@
+#hero {
+    background-image: url('/assets/images/profile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100vw;
+}
+
+#hero > .flex {
+	height: 100%;
+}

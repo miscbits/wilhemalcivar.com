@@ -9,6 +9,9 @@
  *
  * @import "tailwindcss/preflight";
  */
+
+ @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
  @tailwind preflight;
 
  /**
@@ -60,4 +63,7 @@
   * @import "utilities/background-patterns";
   * @import "utilities/skew-transforms";
   */
- 
+
+* {
+  font-family: 'Ubuntu Mono', monospace;
+}
