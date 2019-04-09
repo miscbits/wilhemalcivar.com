@@ -6,6 +6,11 @@
 /tmp
 /out-tsc
 
+#configuration
+.env
+src/environments/*
+!src/environments/.gitkeep
+
 # dependencies
 /node_modules
 

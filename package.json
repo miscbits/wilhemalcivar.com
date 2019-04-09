@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve & ngtw watch",
+    "config": "ts-node ./scripts/set-env.ts",
+    "start": "yarn run config -- --environment=dev && ng serve --env=dev & ngtw watch",
     "build": "ngtw build && ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -23,7 +24,9 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+    "dotenv": "^7.0.0",
     "rxjs": "^5.5.6",
+    "yargs": "^13.2.2",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
