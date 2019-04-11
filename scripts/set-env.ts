@@ -9,12 +9,11 @@ require('dotenv').config();
 // `ts-node set-env.ts --environment=dev`
 // we get it from yargs's argv object
 const environment = argv.argv.environment;
-const isProd = environment === 'prod';
 
 const targetPath = `./src/environments/environment.${environment}.ts`;
 const envConfigFile = `
 export const environment = {
-  production: ${isProd},
+  production: ${process.env.PROD},
   apiUrl: "${process.env.API_URL}",
 };
 `

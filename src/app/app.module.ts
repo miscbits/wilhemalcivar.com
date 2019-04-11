@@ -9,6 +9,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HeroComponent } from './hero/hero.component';
 import { BlogComponent } from './blog/blog.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
+import { HttpClientModule }    from '@angular/common/http';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { TutorialComponent } from './tutorial/tutorial.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

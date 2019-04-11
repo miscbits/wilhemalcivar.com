@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "config": "ts-node ./scripts/set-env.ts",
-    "start": "yarn run config --environment=dev && ng serve & ngtw watch",
+    "start": "yarn run config --environment=prod && ng serve & ngtw watch",
     "build": "ngtw build && ng build --prod",
     "test": "ng test",
     "lint": "ng lint",

@@ -1,4 +1,3 @@
-import { environment } from '../../environments/environment';
 import { JobService } from '../services/job.service'
 import { Component, OnInit } from '@angular/core';
 import { Job } from '../models/job';
@@ -19,6 +18,7 @@ export class CareerComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getJobs();
   }
 
   getJobs(): void {
