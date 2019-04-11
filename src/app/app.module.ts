@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { DeckComponent } from './deck/deck.component';
 import { CareerComponent } from './career/career.component';

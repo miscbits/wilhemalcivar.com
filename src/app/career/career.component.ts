@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
 import { environment } from '../../environments/environment';
+import { JobService } from '../services/job.service'
+import { Component, OnInit } from '@angular/core';
+import { Job } from '../models/job';
 
 @Component({
   selector: 'app-career',
@@ -9,11 +11,19 @@ import { environment } from '../../environments/environment';
 
 export class CareerComponent implements OnInit {
 
-  env = JSON.stringify(environment);
+  jobs: Job[]
+  jobService: JobService;
 
-  constructor() { }
+  constructor(jobService: JobService) { 
+    this.jobService = jobService;
+  }
 
   ngOnInit() {
+  }
+
+  getJobs(): void {
+    this.jobService.getJobs()
+      .subscribe(jobs => this.jobs = jobs);
   }
 
 }
