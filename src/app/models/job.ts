@@ -1,8 +1,8 @@
 export class Job {
-	  id: number;
-      image: string;
-      logo: string;
-      title: string;
-      description: string;
-      website: string;
+    id: number;
+    image: any;
+    logo: any;
+    title: string;
+    description: string;
+    website: string;
 }

@@ -18,5 +18,4 @@ export class JobService {
   getJobs() : Observable<Job[]>  {
     return this.http.get<Job[]>(this.jobsUrl);
   }
-
 }

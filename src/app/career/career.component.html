@@ -1,10 +1,17 @@
-<h1> HERE ARE THE JOBS I'VE HAD</h1>
-<div *ngFor="let job of jobs" [ngStyle]="{'background-image': job.image}">
-	<div class="col-6">
-		<h3>{{job.title}}</h3>
-	</div>
-	<div class="col-12">
-		<p>{{job.description}}</p>
-	</div>
+<div *ngFor="let job of jobs" class="job-section-wrapper">
+	<section [ngStyle]="{'background-image': 'url(' + getUrl() + job.image.url + ')'}" class="job-section">
+		<a href="{{job.website}}" class="no-underline text-black" target="_blank">
+			<div class="flex content-center flex-wrap">
+				<div class="job-content-container">
+					<div class="w-5/6 job-title">
+						<h1>{{job.title}}</h1>
+					</div>
+					<div class="w-2/3 job-description">
+						<p>{{job.description}}</p>
+					</div>
+				</div>
+			</div>
+		</a>
+	</section>
 </div>
 

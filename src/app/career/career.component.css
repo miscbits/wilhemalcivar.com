@@ -1,0 +1,41 @@
+.job-section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100vw;
+	transition: all .5s;
+}
+
+.job-section-wrapper:focus .job-section,
+.job-section-wrapper:hover .job-section {
+  transform: scale(.99);
+}
+
+.job-section-wrapper:hover .job-section .job-content-container {
+  transform: scale(1);
+}
+
+
+.job-section .flex {
+	height: 100%;
+}
+
+.job-content-container {
+	background-color: #f5f5f5;
+	width: 75%;
+	margin: 0 auto;
+	border-radius: 10px;
+	opacity: .85;
+}
+
+.job-content-container > .job-title {
+	width: 50%;
+	margin: 20px;
+	opacity: 1;
+}
+
+.job-content-container > .job-description {
+	margin: 20px;
+	opacity: 1;
+}

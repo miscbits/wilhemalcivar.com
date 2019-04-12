@@ -1,3 +1,4 @@
+import { environment } from '../../environments/environment';
 import { JobService } from '../services/job.service'
 import { Component, OnInit } from '@angular/core';
 import { Job } from '../models/job';
@@ -10,8 +11,10 @@ import { Job } from '../models/job';
 
 export class CareerComponent implements OnInit {
 
-  jobs: Job[]
-  jobService: JobService;
+  private env = environment;
+
+  private jobs: Job[]
+  private jobService: JobService;
 
   constructor(jobService: JobService) { 
     this.jobService = jobService;
@@ -23,7 +26,14 @@ export class CareerComponent implements OnInit {
 
   getJobs(): void {
     this.jobService.getJobs()
-      .subscribe(jobs => this.jobs = jobs);
+      .subscribe(jobs => {
+        this.jobs = jobs
+        console.log(this.jobs)
+      });
+  }
+
+  getUrl(): string {
+    return this.env.apiUrl;
   }
 
 }
