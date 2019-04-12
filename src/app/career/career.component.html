@@ -1,3 +1,10 @@
 <h1> HERE ARE THE JOBS I'VE HAD</h1>
-{{jobs}}
+<div *ngFor="let job of jobs" [ngStyle]="{'background-image': job.image}">
+	<div class="col-6">
+		<h3>{{job.title}}</h3>
+	</div>
+	<div class="col-12">
+		<p>{{job.description}}</p>
+	</div>
+</div>
 

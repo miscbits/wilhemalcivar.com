@@ -10,10 +10,10 @@ require('dotenv').config();
 // we get it from yargs's argv object
 const environment = argv.argv.environment;
 
-const targetPath = `./src/environments/environment.${environment}.ts`;
+const targetPath = `./src/environments/environment.ts`;
 const envConfigFile = `
 export const environment = {
-  production: ${process.env.PROD},
+  production: ${process.env.PRODUCTION},
   apiUrl: "${process.env.API_URL}",
 };
 `
