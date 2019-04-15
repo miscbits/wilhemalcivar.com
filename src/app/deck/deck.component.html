@@ -11,3 +11,15 @@
         </div>
     </div>
 </div>
+
+<div *ngFor="let deck of deckLists" id="deck-section-wrapper">
+    <section class="flex items-center my-3 py-1">
+        <div class="deck-description w-2/3 mx-3">
+            <h2 class="py-2 align-middle">{{deck.name}} <small class="text-xs"><a href="/deck/{{deck.id}}">full list</a></small></h2>
+            <p class="align-middle">{{deck.description}}</p>
+        </div>
+        <div class="signature-card w-1/3 mx-3 text-center">
+            <img class="w-48 mx-auto" src="{{signatureCards[deck.signature_card]}}" />
+        </div>
+    </section>
+</div>
