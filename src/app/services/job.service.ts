@@ -5,15 +5,17 @@ import { Observable, of } from 'rxjs'
 import { Job } from '../models/job';
 
 @Injectable({
-    providedIn: 'root'  // <- ADD THIS
+    providedIn: 'root'
 })
 export class JobService {
 
   private env = environment;
-  private jobsUrl = `${environment.apiUrl}/jobs`;
+  private jobsUrl: string;
 
   constructor(
-    private http: HttpClient) { }
+    private http: HttpClient) {
+      this.jobsUrl = `${this.env.apiUrl}/jobs`;
+    }
 
   getJobs() : Observable<Job[]>  {
     return this.http.get<Job[]>(this.jobsUrl);

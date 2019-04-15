@@ -10,6 +10,7 @@ import { HeroComponent } from './hero/hero.component';
 import { BlogComponent } from './blog/blog.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { HttpClientModule }    from '@angular/common/http';
+import { ListComponent } from './list/list.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClientModule }    from '@angular/common/http';
     TournamentReportComponent,
     HeroComponent,
     BlogComponent,
-    TutorialComponent
+    TutorialComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

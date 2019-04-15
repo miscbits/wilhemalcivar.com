@@ -15,6 +15,7 @@ const envConfigFile = `
 export const environment = {
   production: ${process.env.PRODUCTION},
   apiUrl: "${process.env.API_URL}",
+  scryfallUrl: "${process.env.SCRYFALL_URL}"
 };
 `
 writeFile.writeFile(targetPath, envConfigFile, function (err) {
