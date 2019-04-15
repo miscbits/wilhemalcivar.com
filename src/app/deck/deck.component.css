@@ -1,0 +1,12 @@
+#deck-head {
+    background-image: url('/assets/images/pauper-foils.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100vw;
+}
+
+#deck-head > .flex {
+    height: 100%;
+}

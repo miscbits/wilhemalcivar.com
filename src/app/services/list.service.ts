@@ -23,6 +23,10 @@ export class ListService {
     return this.http.get<DeckList[]>(this.decksUrl);
   }
 
+  getDeckList(listId: number): Observable<DeckList> {
+    return this.http.get<DeckList>(`${this.decksUrl}/${listId}`);
+  }
+
   getScryfallData(identifiers: any) : Observable<any> {
     return this.http.post<any>(this.listsUrl, identifiers);
   }
