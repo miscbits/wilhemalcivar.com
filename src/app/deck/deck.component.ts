@@ -24,14 +24,13 @@ export class DeckComponent implements OnInit {
       decklistObserver.subscribe(decklists => this.deckLists = decklists);
       decklistObserver.subscribe(decklists => {
         let identifiers = []
-        for (var i = decklists.length - 1; i >= 0; i--) {
-          let cardName = decklists[i].signature_card;
+        for (let decklist of decklists) {
+          let cardName = decklist.signature_card;
           identifiers.push({name: cardName});
         }
 
         this.listService.getScryfallData({identifiers: identifiers})
             .subscribe(cards => {
-                console.log(cards);
                 for(let card of cards.data) {
                     this.signatureCards[card["name"]] = card["image_uris"]["normal"];
                 }
