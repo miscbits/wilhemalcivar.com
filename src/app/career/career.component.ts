@@ -11,10 +11,10 @@ import { Job } from '../models/job';
 
 export class CareerComponent implements OnInit {
 
-  private env = environment;
+  env = environment;
 
-  private jobs: Job[]
-  private jobService: JobService;
+  jobs: Job[]
+  jobService: JobService;
 
   constructor(jobService: JobService) { 
     this.jobService = jobService;

@@ -9,9 +9,9 @@ import { DeckList } from '../models/decklist'
 })
 export class DeckComponent implements OnInit {
 
-  private signatureCards: Object;
-  private deckLists: DeckList[];
-  private listService: ListService;
+  signatureCards: Object;
+  deckLists: DeckList[];
+  listService: ListService;
 
   constructor(listService: ListService) {
       this.listService = listService;
