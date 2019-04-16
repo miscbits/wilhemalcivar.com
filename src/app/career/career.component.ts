@@ -27,8 +27,7 @@ export class CareerComponent implements OnInit {
   getJobs(): void {
     this.jobService.getJobs()
       .subscribe(jobs => {
-        this.jobs = jobs
-        console.log(this.jobs)
+        this.jobs = jobs;
       });
   }
 

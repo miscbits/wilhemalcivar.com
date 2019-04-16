@@ -1,5 +1,5 @@
 <div *ngFor="let job of jobs" class="job-section-wrapper">
-	<section [ngStyle]="{'background-image': 'url(' + getUrl() + job.image.url + ')'}" class="job-section">
+	<section [ngStyle]="{'background-image': 'url(' + job.image.url + ')'}" class="job-section">
 		<a href="{{job.website}}" class="no-underline text-black" target="_blank">
 			<div class="flex content-center flex-wrap">
 				<div class="job-content-container">
