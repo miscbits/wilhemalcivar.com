@@ -1,3 +1,10 @@
-<p>
-  list works!
-</p>
+<h1>{{decklist.name}}</h1>
+<div *ngFor="let cardType of decklist.list | keyvalue">
+    {{cardType.key}} ({{getSum(cardType.value)}})
+    <ul>
+        <li *ngFor="let cardName of cardType.value" >{{cardName}}</li>
+    </ul>
+</div>
+<div>
+    {{decklist.description}}
+</div>
