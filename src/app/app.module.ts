@@ -11,6 +11,7 @@ import { BlogComponent } from './blog/blog.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { ListComponent } from './list/list.component';
+import { PhotographyComponent } from './photography/photography.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ListComponent } from './list/list.component';
     HeroComponent,
     BlogComponent,
     TutorialComponent,
-    ListComponent
+    ListComponent,
+    PhotographyComponent
   ],
   imports: [
     BrowserModule,

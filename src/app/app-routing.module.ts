@@ -6,6 +6,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ListComponent } from './list/list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CareerComponent } from './career/career.component';
+import { PhotographyComponent } from './photography/photography.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { TournamentReportComponent } from './tournament-report/tournament-report.component';
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'tutorials', component: TutorialComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'tournamentreports', component: TournamentReportComponent },
+  { path: 'photography', component: PhotographyComponent },
   { path: 'deck/:id', component: ListComponent }
 ];
 
